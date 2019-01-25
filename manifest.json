@@ -1,0 +1,18 @@
+{
+"manifest_version": 2,
+    "name": "Artificial intelligence to Genie in a Bottle",
+    "description": "Changes the term \"Artificial Intelligence\" or \"AI\" to \"Genie in a Bottle. Works also in Finnish",
+    "version": "0.2",
+    "icons": {"128": "genie.png"},
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
