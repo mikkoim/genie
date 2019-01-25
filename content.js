@@ -10,7 +10,8 @@ for (var i = 0; i < elements.length; i++) {
             var text = node.nodeValue;
 
             //English
-            var replacedText = text.replace(/AI/g, "Genie");
+            var replacedText = text.replace(/[\W\s](AI)[\W\s]/g, " Genie ");
+            var replacedText = replacedText.replace(/^(AI)[\W\s]/g, "Genie ");
             var replacedText = replacedText.replace(/Artificial Intelligence/gi, "Genie in a Bottle");
 
             //Finnish
@@ -38,6 +39,9 @@ for (var i = 0; i < elements.length; i++) {
 
             var replacedText = replacedText.replace(/koneoppimisen/g, "lampun hieromisen");
             var replacedText = replacedText.replace(/Koneoppimisen/g, "Lampun hieromisen");
+
+            var replacedText = replacedText.replace(/koneoppiva/g, "lamppua hierova");
+            var replacedText = replacedText.replace(/Koneoppiva/g, "Lamppua hierova");
 
             var replacedText = replacedText.replace(/Koneoppimis/g, "Lampun hieromis");
             var replacedText = replacedText.replace(/Koneoppimis/g, "Lampun hieromis");
